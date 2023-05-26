@@ -4,7 +4,7 @@ This project is used from SkiaSharp library and SkiaSharp.NativeAssets.Linux lib
 
 
 
-<code>
+<pre>
         public IActionResult Index()
         {
             return View();
@@ -50,4 +50,4 @@ This project is used from SkiaSharp library and SkiaSharp.NativeAssets.Linux lib
                 myStream.CopyTo(fileStream);
             }
         }
-</code>
+</pre>
