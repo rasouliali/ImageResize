@@ -7,7 +7,7 @@ This project is used from SkiaSharp library and SkiaSharp.NativeAssets.Linux lib
 
 
         public static void ResizeImage(Stream fileContents,
-        int maxWidth, int maxHeight, string filePath,
+        int maxWidth, int maxHeight, string saveFilePath,
         SKFilterQuality quality = SKFilterQuality.Medium)
         {
             fileContents.Seek(0, SeekOrigin.Begin);
@@ -16,7 +16,7 @@ This project is used from SkiaSharp library and SkiaSharp.NativeAssets.Linux lib
             using SKBitmap scaledBitmap = sourceBitmap.Resize(new SKImageInfo(maxWidth, maxHeight), quality);
             using SKImage scaledImage = SKImage.FromBitmap(scaledBitmap);
             using SKData data = scaledImage.Encode();
-            using (var fileStream = System.IO.File.Create(filePath))
+            using (var fileStream = System.IO.File.Create(saveFilePath))
             {
                 var myStream = data.AsStream();
                 myStream.Seek(0, SeekOrigin.Begin);
