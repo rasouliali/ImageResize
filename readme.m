@@ -5,20 +5,6 @@ This project is used from SkiaSharp library and SkiaSharp.NativeAssets.Linux lib
 
 
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult UploadImage(IFormFile myFile)
-        {
-            using (var st = myFile.OpenReadStream())
-            {
-                var path = Path.Combine(_hostEnvironment.ContentRootPath, "wwwroot", "myfile.jpg");
-                ResizeImage(st, 400, 400, path, SKFilterQuality.Low);
-            }
-            return View("Index","Image resize successfully!");
-        }
 
         public static void ResizeImage(Stream fileContents,
         int maxWidth, int maxHeight, string filePath,
@@ -37,3 +23,6 @@ This project is used from SkiaSharp library and SkiaSharp.NativeAssets.Linux lib
                 myStream.CopyTo(fileStream);
             }
         }
+        
+        
+        
