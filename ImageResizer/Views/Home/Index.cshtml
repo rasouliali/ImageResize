@@ -1,0 +1,14 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<p class="text-success">
+    @Model 
+</p>
+
+<form id="creditcardform" action="/Home/UploadImage" method="post" enctype="multipart/form-data">
+    <input type="file" name="myfile" />
+    <input type="submit" value="Submit"/>
+</form>
+<img src="~/myfile.jpg" />
