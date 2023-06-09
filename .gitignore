@@ -396,3 +396,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/ImageResizer/wwwroot/myfile2.jpg
+/ImageResizer/wwwroot/myfile3.jpg
